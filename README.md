@@ -2,6 +2,7 @@
 # Nama : Karisna Wahyuningtyas
 # Kelas : SI22A1
 # NIM : 220101021
+# Prodi : Sistem Informasi
 # Tema : Sistem yang dibangun adalah Personal Library Management yaitu aplikasi berbasis web yang digunakan untuk membantu pengguna dalam mengelola koleksi buku pribadi
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
