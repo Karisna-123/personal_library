@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 24, 2026 at 08:25 AM
+-- Generation Time: Apr 25, 2026 at 04:42 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -41,7 +41,22 @@ CREATE TABLE `book` (
 --
 
 INSERT INTO `book` (`id`, `userId`, `judul`, `penulis`, `statusBaca`, `createdAt`) VALUES
-(1, 1, 'Laskar Pelangi', 'Andrea', 'Belum Dibaca', '2026-04-23 04:49:26.157');
+(1, 1, 'Laskar Pelangi', 'Andrea', 'Belum Dibaca', '2026-04-23 04:49:26.157'),
+(4, 3, 'Sang Pemimpin', 'Andrea Hirata', 'Sedang Dibaca', '2026-04-24 13:05:55.753'),
+(5, 3, 'Matematika', 'E. T. Ruseffendi', 'Selesai Dibaca', '2026-04-24 13:09:45.644');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `id` int NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -78,6 +93,12 @@ ALTER TABLE `book`
   ADD KEY `Book_userId_fkey` (`userId`);
 
 --
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -92,7 +113,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `book`
 --
 ALTER TABLE `book`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
